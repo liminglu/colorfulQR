@@ -1,7 +1,7 @@
 ####二维码
 ##写在最前：其实它挺二的！知道这点就够了！
 #####二维码构造
-![二维码](file:///Users/apple/Pictures/%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%BB%93%E6%9E%84.png)
+![二维码](http://liminglu.cn/images/qr_construction.png)
 #####生成过程
 * 数据分析
 * 数据编码
@@ -15,13 +15,13 @@
 #####10进制与二进制的转换
 num.toString(2)
 除以2取余数，最后倒过来,如18二进制是10010
-![二进制](file:///Users/apple/Pictures/%E4%BA%8C%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA%E6%B3%95.gif)
+![二进制](http://liminglu.cn/images/qr_expression.gif)
 #####为什么用二进制8位储存?
 #####`位`是数据存储的最小单位，其中`8bit` 就称为一个字节(Byte)
 
 #####为什么使用大量的位运算?
 #####底层算法，效率最高
-![左位运算](file:///Users/apple/Pictures/%E5%B7%A6%E4%BD%8D%E8%BF%90%E7%AE%97.gif)
+![左位运算](http://liminglu.cn/images/left_bit_calculate.gif)
 
 #####计算typeNumber的目的是version,根据数据进行计算typeNumber
 #####生成modules configuration:refers to the number of modules contained in a symbol, commencing with Version 1 (21 × 21 modules) up to Version 40 (177 × 177 modules)
