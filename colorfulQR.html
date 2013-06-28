@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<title>colorfulQR</title>
+<style>
+	p {
+		text-align:center;
+		font-size:30px;
+		font-weight:600;
+		color:#c3c3c3;
+	}
+	#open  {
+		width: 100px;
+		height: 30px;
+		line-height: 26px;
+		border: 0;
+		color: #c3c3c3;
+		background-color: #000000;
+		border-radius: 10px;
+		font-size: 15px;
+		font-weight: 600;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+<script src="http://liminglu.cn/libs/jquery/jquery-1.4-min.js"></script>
+<script type="text/javascript" src="../src/colorfulQR.js"></script>
+<script type="text/javascript" src="../src/qrcode.js"></script>
+
+<p>Render in table</p>
+<div id="qrcodeTable" style="padding:10px 0;width:100px;margin:0 auto;position:relative">
+	<img id="qrImg" src="http://liminglu.cn/images/icon.jpg" width="24" height="24" style="
+    position: absolute;">
+</div>
+<p>Render in canvas</p>
+<div id="qrcodeCanvas" style="padding:10px 0;width:100px;margin:0 auto;position:relative">
+</div>
+<p><input type="button" id="open" value="打开图片" /></p>
+
+<script>
+	//jQuery('#qrcode').qrcode("this plugin is great");
+	var width = 150,height = 150; //测试通过的数据150;200,300
+	
+	jQuery('#qrcodeTable').qrcode({
+		render	: "table",
+		text	: "http://liminglu.cn",
+		width:width,
+		height:height
+	});
+	
+	if(!!window.HTMLCanvasElement) {	
+		jQuery('#qrcodeCanvas').qrcode({
+			render : "canvas",
+			text	: "https://jiaofei.alipay.com/jiaofei.htm",
+			width:width,
+			height:height
+		});
+	
+	}
+	
+	$("#open").click(function(){
+		window.open($('canvas').get(0).toDataURL("image/jpeg"));
+	})
+		
+	
+</script>
+
+</body>
+</html>
